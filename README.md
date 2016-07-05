@@ -7,6 +7,7 @@
 
 ![Alt text](https://s31.postimg.org/j92eliel7/Simulator_Screen_Shot_06_Jul_2016_3_54_19_AM.png "CLTimer beta")
 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,6 +23,18 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "CLTimer"
+```
+
+To start Timer
+
+```swift
+  timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
+```
+
+To Reset Timer
+
+```swift
+  timer.resetTimer()
 ```
 
 ## Author
