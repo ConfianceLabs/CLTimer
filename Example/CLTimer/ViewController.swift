@@ -12,19 +12,29 @@ import CLTimer
 
 class ViewController: UIViewController {
 
+ 
+    @IBOutlet weak var timer: CLTimer!
    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func stopTimer(sender: AnyObject) {
+        timer.stopTimer()
     }
-
+   
+    @IBAction func resetTimer(sender: AnyObject) {
+        timer.resetTimer()
+    }
+   
+    @IBAction func startTimer(sender: AnyObject) {
+        timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
+    }
 }
 

@@ -19,18 +19,72 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD9-p5-N2j" customClass="CLTimer" customModule="CLTimer">
-                                <rect key="frame" x="117" y="80" width="366" height="215"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="70" y="80" width="460" height="215"/>
+                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="timerBackgroundColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="countDownColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z84-TL-Med">
+                                <rect key="frame" x="70" y="376" width="460" height="30"/>
+                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reset Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e4p-Pt-YgX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qG-YL-qoj">
+                                <rect key="frame" x="70" y="324" width="460" height="30"/>
+                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="toL-bR-G6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-oN-S0I">
+                                <rect key="frame" x="70" y="428" width="460" height="30"/>
+                                <color key="backgroundColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stop Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CU6-mR-1Ar"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cD9-p5-N2j" secondAttribute="trailing" constant="97" id="8cv-MO-eOF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z84-TL-Med" secondAttribute="trailing" constant="50" id="1d8-hU-wAW"/>
+                            <constraint firstItem="Iab-oN-S0I" firstAttribute="top" secondItem="z84-TL-Med" secondAttribute="bottom" constant="22" id="2sv-gP-gvH"/>
+                            <constraint firstItem="2qG-YL-qoj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="38c-a9-8Ak"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cD9-p5-N2j" secondAttribute="trailing" constant="50" id="8cv-MO-eOF"/>
+                            <constraint firstItem="2qG-YL-qoj" firstAttribute="top" secondItem="cD9-p5-N2j" secondAttribute="bottom" constant="29" id="9Ew-8T-5uq"/>
+                            <constraint firstItem="Iab-oN-S0I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="CLV-uJ-3qR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="z84-TL-Med" secondAttribute="bottom" constant="194" id="EfI-pM-NhH"/>
+                            <constraint firstItem="z84-TL-Med" firstAttribute="top" secondItem="2qG-YL-qoj" secondAttribute="bottom" constant="22" id="H1F-sy-kG5"/>
+                            <constraint firstItem="z84-TL-Med" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="VNr-Op-QVY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iab-oN-S0I" secondAttribute="trailing" constant="50" id="b6e-qx-laF"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cD9-p5-N2j" secondAttribute="bottom" constant="305" id="k0n-JY-Rgh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2qG-YL-qoj" secondAttribute="trailing" constant="50" id="nLh-d8-D0i"/>
                             <constraint firstItem="cD9-p5-N2j" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="tNI-YH-Ftd"/>
-                            <constraint firstItem="cD9-p5-N2j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="97" id="thN-Q4-QfR"/>
+                            <constraint firstItem="cD9-p5-N2j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="thN-Q4-QfR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timer" destination="cD9-p5-N2j" id="YBS-wK-NLm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

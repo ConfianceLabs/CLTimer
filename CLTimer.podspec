@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CLTimer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A Circular Timer in swift.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
 
   s.homepage         = 'https://github.com/ConfianceLabs/CLTimer.git'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  # s.screenshots     = 'https://www.dropbox.com/s/uoeg6en2zqz4zgg/Simulator%20Screen%20Shot%2006-Jul-2016%2C%203.54.19%20AM.png?dl=0', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dewanshu Sharma' => 'sdivyanshu23@gmail.com' }
   s.source           = { :git => 'https://github.com/ConfianceLabs/CLTimer.git', :tag => s.version.to_s }

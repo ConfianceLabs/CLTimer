@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'CLTimer_Example' do
-  pod 'CLTimer', :path => '../'
+
+  pod ‘CLTimer’, :path => '/Users/apple/Desktop/CLTimer/CLTimer'
 
   target 'CLTimer_Tests' do
     inherit! :search_paths

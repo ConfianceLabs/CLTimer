@@ -1,16 +1,16 @@
 PODS:
-  - CLTimer (0.1.0)
+  - CLTimer (0.1.1)
 
 DEPENDENCIES:
-  - CLTimer (from `../`)
+  - CLTimer (from `/Users/apple/Desktop/CLTimer/CLTimer`)
 
 EXTERNAL SOURCES:
   CLTimer:
-    :path: ../
+    :path: /Users/apple/Desktop/CLTimer/CLTimer
 
 SPEC CHECKSUMS:
-  CLTimer: 1f029a8f2ece53816fd1245554ece4394beeada9
+  CLTimer: 3c8dc1c88bd5d75644d5d392dd76cc35b05e539e
 
-PODFILE CHECKSUM: 1cbaec36416b7d9e56040500e53a3064c9c75480
+PODFILE CHECKSUM: 7f1a7acc5c5083670fe48866a56c9fc5ceee19c6
 
 COCOAPODS: 1.0.0
