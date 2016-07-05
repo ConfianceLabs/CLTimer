@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CLTimer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CLTimer.'
+  s.summary          = 'A Circular Timer in swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,11 +17,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+  s.description      = 'CLTimer provides you a circular timer to integrate in your ios app with multiple designs and time format options. Intead of writing complicated code with complex calculations you can simply integrate Timer in your app with 4-5 lines of code'
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/CLTimer'
+  s.homepage         = 'https://github.com/ConfianceLabs/CLTimer.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dewanshu Sharma' => 'sdivyanshu23@gmail.com' }

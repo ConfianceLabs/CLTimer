@@ -1,0 +1,6 @@
+framework module Pods_CLTimer_Example {
+  umbrella header "Pods-CLTimer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

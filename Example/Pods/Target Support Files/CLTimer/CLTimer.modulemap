@@ -1,0 +1,6 @@
+framework module CLTimer {
+  umbrella header "CLTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
