@@ -1,9 +1,9 @@
 {
   "name": "CLTimer",
   "version": "0.1.0",
-  "summary": "A short description of CLTimer.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/CLTimer",
+  "summary": "A Circular Timer in swift.",
+  "description": "CLTimer provides you a circular timer to integrate in your ios app with multiple designs and time format options. Intead of writing complicated code with complex calculations you can simply integrate Timer in your app with 4-5 lines of code",
+  "homepage": "https://github.com/ConfianceLabs/CLTimer.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"

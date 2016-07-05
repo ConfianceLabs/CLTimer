@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10113B2FCD3476AE44ECE4541FD9F358 /* CLTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C0E6DDDC5CAF2CF9F95DE93A0D58F /* CLTimer.swift */; };
 		28BB18F7E2844DB28DBB01DDEF365492 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		2C4C3482BA5D1DA4AD97E17D150D6A4D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90372657AECF428A54AB10078598ADA2 /* ReplaceMe.swift */; };
 		2D0081148BFC499E70B7B96A66AFF319 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		64BDB84BC02D0C7329BED84E5E07F853 /* Pods-CLTimer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ACCF621D3C7C11991FABE0AFAB900F8 /* Pods-CLTimer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C9974B09C45663BBC2FBEEEDB5F0F67 /* Pods-CLTimer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F811E9A4CC5C26DFEC6AA9240A59C /* Pods-CLTimer_Tests-dummy.m */; };
 		8AD27608B56A2BB26B43AA191B2BB273 /* Pods-CLTimer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 681386DE5B44DD4E6FA7E37FBDA4F4D6 /* Pods-CLTimer_Example-dummy.m */; };
 		9280D6AD87B39D2BBBA98F0E11FFF93F /* Pods-CLTimer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1BA9810DA2073DF5B213FB27F5E9A5 /* Pods-CLTimer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E52386D1DC2D2E528A7B95C55A067F1 /* CLTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8432A6E99430CD4022BC0EA0CD12D5 /* CLTimer-dummy.m */; };
 		CDA033708439E040A4BE654292D7E2C5 /* CLTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA13B74674ACBD1B807E32294EBF308 /* CLTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4FB300C0227BA7019C287692597A90F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		FBD7BEDDFF8869D5BA42A636647E335A /* CLTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8432A6E99430CD4022BC0EA0CD12D5 /* CLTimer-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		024EF9B9E751BEC791773518B4D09344 /* CLTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTimer-prefix.pch"; sourceTree = "<group>"; };
 		1EC92549A501CF54C42A708B5037D715 /* CLTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLTimer.modulemap; sourceTree = "<group>"; };
+		316C0E6DDDC5CAF2CF9F95DE93A0D58F /* CLTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CLTimer.swift; sourceTree = "<group>"; };
 		3D1F811E9A4CC5C26DFEC6AA9240A59C /* Pods-CLTimer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLTimer_Tests-dummy.m"; sourceTree = "<group>"; };
 		4D957F2153085899973ED96B3C4067DA /* Pods-CLTimer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLTimer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5011AA33A1B2164CFCBB2A187EF53C9C /* Pods_CLTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTimer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +46,6 @@
 		802702B3C01757A395D0D8B388EF0749 /* Pods_CLTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTimer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86421F723836903CD0D7C824B8B6E946 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F1BA9810DA2073DF5B213FB27F5E9A5 /* Pods-CLTimer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLTimer_Example-umbrella.h"; sourceTree = "<group>"; };
-		90372657AECF428A54AB10078598ADA2 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		947288587199EE8481E3D8B9B587C61B /* CLTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5A622AE73AAE0A9DCFA00BD950CFB8 /* Pods-CLTimer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTimer_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,14 +102,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		1A12182A5375AC648F889FF5812DC113 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				90372657AECF428A54AB10078598ADA2 /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +132,7 @@
 		BF4512D5585E6B26D57CDCC2A49F70EB /* CLTimer */ = {
 			isa = PBXGroup;
 			children = (
-				1A12182A5375AC648F889FF5812DC113 /* Classes */,
+				CE823BDA625A0EC4FE4EC0DACCC3A071 /* Classes */,
 			);
 			path = CLTimer;
 			sourceTree = "<group>";
@@ -165,6 +157,14 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/CLTimer";
+			sourceTree = "<group>";
+		};
+		CE823BDA625A0EC4FE4EC0DACCC3A071 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				316C0E6DDDC5CAF2CF9F95DE93A0D58F /* CLTimer.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D97A03E2C0702539B9066948B11EC624 /* Pods-CLTimer_Example */ = {
@@ -291,7 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4F0319A46CD973A0B1DA93EE813F605 /* Build configuration list for PBXNativeTarget "CLTimer" */;
 			buildPhases = (
-				6A6392C0FCBA4FFD07620EB2A93AE040 /* Sources */,
+				352394EEA355325749CC9B5EE092B89E /* Sources */,
 				2090CA3442A79EE97A68A4A1758B2729 /* Frameworks */,
 				D70226575DEDBEC8AC49C4494F0752F8 /* Headers */,
 			);
@@ -333,12 +333,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A6392C0FCBA4FFD07620EB2A93AE040 /* Sources */ = {
+		352394EEA355325749CC9B5EE092B89E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD7BEDDFF8869D5BA42A636647E335A /* CLTimer-dummy.m in Sources */,
-				2C4C3482BA5D1DA4AD97E17D150D6A4D /* ReplaceMe.swift in Sources */,
+				9E52386D1DC2D2E528A7B95C55A067F1 /* CLTimer-dummy.m in Sources */,
+				10113B2FCD3476AE44ECE4541FD9F358 /* CLTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
