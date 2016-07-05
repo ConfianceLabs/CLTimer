@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CLTimer_Example' do
+  pod 'CLTimer', :path => '../'
+
+  target 'CLTimer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
