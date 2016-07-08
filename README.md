@@ -41,6 +41,11 @@ To start Timer
   timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
 ```
 
+Change countDown circle and Timer circle color by selecting CLTimer View from your StoryBoard or xib.  
+
+![Alt text](https://s26.postimg.org/tx6ovtreh/jhj.png )
+
+
 
 
 To Reset Timer
@@ -71,10 +76,15 @@ To Show CountDown time on your Own Label
         print("updated Time : ",time)
         myLabel.text  = "\(time) Seconds"
      }
-```
+```   
 
 
+You can also checkout some other CLTimer Delegate functions 
 
+
+# YouTube Link   
+
+https://www.youtube.com/channel/UCwYjZ3vXQYhJaRwUm6u9-bA
 
 ## Author
 
