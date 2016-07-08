@@ -27,7 +27,7 @@ it, simply add the following line to your Podfile:
 pod "CLTimer"
 ```
 
-Step 1 - Replace UIView class with CLTimer in your xib or StoryBoard.  
+Step 1 - From attribute inspector replace UIView class of your UIView with CLTimer class in your xib or StoryBoard.  
 
 Step 2 - Create its Outlet.  
 
@@ -49,29 +49,32 @@ To Reset Timer
   timer.resetTimer()
 ```
 
-## Add Ons 
-
-You can choose time format :- .Minutes/ .Seconds  
-You can also choose CountDown Mode :- .Forward/.Reverse
-You can hide the default countDown Time and show countDown time on Your own Label using 
-CLTimer's Delegate function first of all apply cltimerDelegate
+To Stop Timer  
 
 ```swift
-  class ViewController: UIViewController,cltimerDelegate
+  timer.stopTimer()
 ```
-Then hide default countDown   
+To Hide Default CountDown  
 
 ```swift
   timer.showDefaultCountDown=false
 ```
-Finally use delegate function to get countDown time  
-
+To Show CountDown time on your Own Label   
+- Apply cltimerDelegate
+```swift
+  class ViewController: UIViewController,cltimerDelegate
+```
+- use its Delegate Function  
+ 
 ```swift
  func timerDidUpdate(time:Int){
         print("updated Time : ",time)
         myLabel.text  = "\(time) Seconds"
-        }
+     }
 ```
+
+
+
 
 ## Author
 
