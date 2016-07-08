@@ -10,7 +10,7 @@ import UIKit
 import CLTimer
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,cltimerDelegate {
 
  
     @IBOutlet weak var timer: CLTimer!
@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
-    
+        timer.cltimer_delegate=self
+        timer.showDefaultCountDown=false
     }
 
     @IBAction func stopTimer(sender: AnyObject) {
@@ -31,10 +31,20 @@ class ViewController: UIViewController {
    
     @IBAction func resetTimer(sender: AnyObject) {
         timer.resetTimer()
+       
     }
    
     @IBAction func startTimer(sender: AnyObject) {
-        timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
+        timer.startTimer(withSeconds: 10, format:.Minutes , mode: .Reverse)
+    }
+    
+    
+    func timerDidStop(time:Int){
+         print("Stopped time : ",time)
+    }
+    
+    func timerDidUpdate(time:Int){
+        print("updated Time : ",time)
     }
 }
 

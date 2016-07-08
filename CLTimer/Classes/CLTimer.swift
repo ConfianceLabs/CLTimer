@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol cltimerDelegate {
-    func timerDidUpdate(time:Int)
-    func timerDidStop(time:Int)
+@objc public protocol cltimerDelegate {
+    optional func timerDidUpdate(time:Int)
+    optional func timerDidStop(time:Int)
 }
 
 
@@ -27,7 +27,12 @@ public class CLTimer: UIView {
         case Forward
     }
     
-    var cltimer_delegate :   cltimerDelegate?
+    public  var cltimer_delegate :   cltimerDelegate?
+   public  var showDefaultCountDown    =   true {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     var text    =   NSMutableAttributedString()
     var countDownFormat =   0
     var countDownFontSize   =   CGFloat()
@@ -84,6 +89,9 @@ public class CLTimer: UIView {
         countDown.stroke()
         
         
+        if showDefaultCountDown{
+            
+        
        
         if countDownFormat==0{
              text = NSMutableAttributedString(string: "\(remainingTime)"+"s")
@@ -100,7 +108,7 @@ public class CLTimer: UIView {
         text.addAttribute(NSForegroundColorAttributeName,value: countDownColor, range: NSMakeRange(0, text.length))
         text.drawAtPoint(CGPoint(x: timerCenter.x-text.size().width/2,y: timerCenter.y-text.size().height/2))
 
-        
+        }
     }
     
     func secondsToMinutes(timeToConvert:Int)->(min:Int,sec:Int){
@@ -129,8 +137,16 @@ public class CLTimer: UIView {
         var endAngle    =   CGFloat()
         
         if timeModeForward{
+            
+            if coveredTime <= 0.0{
+                coveredTime =   0.0
+            }else{
+                
+            }
+            
             endAngle   =   CGFloat((2*M_PI)/Double(timerSeconds))*CGFloat(coveredTime)
             startAngle  =   CGFloat((3*M_PI)/Double(2.0))
+            
             
             let path    =   UIBezierPath(arcCenter:centerPoint ,radius: radius,startAngle: startAngle,endAngle: startAngle+endAngle,clockwise: true)
             path.lineWidth  =   6.0
@@ -151,7 +167,7 @@ public class CLTimer: UIView {
 
     
   public  func startTimer(withSeconds seconds:Int,format:timeFormat,mode:timerMode){
-        
+        resetVariables()
         timerSeconds    =   seconds
     
     
@@ -198,13 +214,13 @@ public class CLTimer: UIView {
             }
         }
         
-        
+        cltimer_delegate?.timerDidUpdate!(remainingTime)
        setNeedsDisplay()
         
 
     }
     
-  public   func resetTimer(){
+  public  func resetTimer(){
         countDownSchedular.invalidate()
         schedular.invalidate()
         remainingTime=0
@@ -213,6 +229,7 @@ public class CLTimer: UIView {
     }
    
   public  func stopTimer(){
+    cltimer_delegate?.timerDidStop!(remainingTime)
         countDownSchedular.invalidate()
         schedular.invalidate()
     }
@@ -224,7 +241,7 @@ public class CLTimer: UIView {
             if coveredTime  <= 0.0{
                 print("ccc",coveredTime)
                 schedular.invalidate()
-                 //setNeedsDisplay()
+                 setNeedsDisplay()
             }else{
                 setNeedsDisplay()
             }
@@ -269,6 +286,17 @@ public class CLTimer: UIView {
         }
         
     }
+    
+    
+    func resetVariables(){
+         countDownFormat =   0
+         remainingTime   =   0
+         countdownScalar =   0
+         countdownSmoother   =   0.01
+         coveredTime   =   0
+
+    }
+    
     
     
     
