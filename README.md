@@ -41,10 +41,13 @@ To start Timer
   timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
 ```
 
-Change countDown circle and Timer circle color by selecting CLTimer View from your StoryBoard or xib.  
+Change countDown circle and Timer circle color by selecting CLTimer View from your StoryBoard or xib.    
 
-![Alt text](https://s26.postimg.org/tx6ovtreh/jhj.png )
 
+![Alt text](https://s26.postimg.org/tx6ovtreh/jhj.png )   
+
+
+  
 
 
 
@@ -52,23 +55,33 @@ To Reset Timer
 
 ```swift
   timer.resetTimer()
-```
+```   
+
+
 
 To Stop Timer  
 
 ```swift
   timer.stopTimer()
-```
+```   
+
+
 To Hide Default CountDown  
 
 ```swift
   timer.showDefaultCountDown=false
-```
-To Show CountDown time on your Own Label   
+```   
+
+
+To Show CountDown time on your Own Label    
+
+
 - Apply cltimerDelegate
 ```swift
   class ViewController: UIViewController,cltimerDelegate
-```
+```   
+
+
 - use its Delegate Function  
  
 ```swift
@@ -76,7 +89,9 @@ To Show CountDown time on your Own Label
         print("updated Time : ",time)
         myLabel.text  = "\(time) Seconds"
      }
-```   
+```      
+
+
 
 
 You can also checkout some other CLTimer Delegate functions 
