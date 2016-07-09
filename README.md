@@ -27,7 +27,7 @@ it, simply add the following line to your Podfile:
 pod "CLTimer"
 ```
 
-Step 1 - From attribute inspector replace UIView class of your UIView with CLTimer class in your xib or StoryBoard.  
+Step 1 - From identity inspector replace UIView class of your UIView with CLTimer class in your xib or StoryBoard.  
 
 Step 2 - Create its Outlet.  
 
