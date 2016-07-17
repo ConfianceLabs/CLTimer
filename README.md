@@ -14,6 +14,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Swift 2.2
+
 ## Installation
 
 CLTimer provides you a circular timer to integrate in your ios app with multiple designs and time format options. Intead of writing complicated code with complex calculations you can simply integrate Timer in your app with a single line of code.
@@ -25,17 +27,79 @@ it, simply add the following line to your Podfile:
 pod "CLTimer"
 ```
 
+Step 1 - From identity inspector replace UIView class of your UIView with CLTimer class in your xib or StoryBoard.  
+
+Step 2 - Create its Outlet.  
+
+```swift
+  @IBOutlet weak var timer: CLTimer!
+```
+
 To start Timer
 
 ```swift
   timer.startTimer(withSeconds: 100, format:.Minutes , mode: .Reverse)
 ```
 
+Change countDown circle and Timer circle color by selecting CLTimer View from your StoryBoard or xib.    
+
+
+![Alt text](https://s26.postimg.org/tx6ovtreh/jhj.png )   
+
+
+  
+
+
+
 To Reset Timer
 
 ```swift
   timer.resetTimer()
-```
+```   
+
+
+
+To Stop Timer  
+
+```swift
+  timer.stopTimer()
+```   
+
+
+To Hide Default CountDown  
+
+```swift
+  timer.showDefaultCountDown=false
+```   
+
+
+To Show CountDown time on your Own Label    
+
+
+- Apply cltimerDelegate
+```swift
+  class ViewController: UIViewController,cltimerDelegate
+```   
+
+
+- use its Delegate Function  
+ 
+```swift
+ func timerDidUpdate(time:Int){
+        print("updated Time : ",time)
+        myLabel.text  = "\(time) Seconds"
+     }
+```      
+
+
+
+
+You can also checkout some other CLTimer Delegate functions 
+
+
+# YouTube Link   
+
+https://www.youtube.com/channel/UCwYjZ3vXQYhJaRwUm6u9-bA
 
 ## Author
 
