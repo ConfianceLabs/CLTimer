@@ -44,6 +44,7 @@ public class CLTimer: UIView {
     var countdownScalar =   0
     var countdownSmoother   =   0.01
     var coveredTime:Double   =   0
+    var isRunning   =   false
     @IBInspectable
     var timerBackgroundColor  :    UIColor =   UIColor.lightGrayColor(){
         didSet{
@@ -87,6 +88,8 @@ public class CLTimer: UIView {
         countDownColor.setStroke()
         countDown.fill()
         countDown.stroke()
+        
+        
         
         
         if showDefaultCountDown{
@@ -237,7 +240,7 @@ public class CLTimer: UIView {
     func setToStart(){
         
         if timeModeForward{
-            coveredTime =   coveredTime -  countdownSmoother*50
+            coveredTime =   coveredTime -  coveredTime*100
             if coveredTime  <= 0.0{
                 print("ccc",coveredTime)
                 schedular.invalidate()
@@ -247,7 +250,7 @@ public class CLTimer: UIView {
             }
             
         }else{
-            coveredTime =   coveredTime +  countdownSmoother*50
+            coveredTime =   coveredTime +  (Double(timerSeconds)-coveredTime)*10
             
             if coveredTime  >= Double(timerSeconds){
                 schedular.invalidate()
@@ -294,7 +297,8 @@ public class CLTimer: UIView {
          countdownScalar =   0
          countdownSmoother   =   0.01
          coveredTime   =   0
-
+        countDownSchedular.invalidate()
+        schedular.invalidate()
     }
     
     

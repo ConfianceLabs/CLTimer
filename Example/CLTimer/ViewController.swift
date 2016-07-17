@@ -22,7 +22,7 @@ class ViewController: UIViewController,cltimerDelegate {
         
         
         timer.cltimer_delegate=self
-        timer.showDefaultCountDown=false
+       // timer.showDefaultCountDown=false
     }
 
     @IBAction func stopTimer(sender: AnyObject) {
@@ -35,7 +35,7 @@ class ViewController: UIViewController,cltimerDelegate {
     }
    
     @IBAction func startTimer(sender: AnyObject) {
-        timer.startTimer(withSeconds: 10, format:.Minutes , mode: .Reverse)
+        timer.startTimer(withSeconds: 3, format:.Minutes , mode: .Reverse)
     }
     
     
