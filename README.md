@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/CLTimer.svg?style=flat)](http://cocoapods.org/pods/CLTimer)
 [![Platform](https://img.shields.io/cocoapods/p/CLTimer.svg?style=flat)](http://cocoapods.org/pods/CLTimer)
 
-![Alt text](https://s31.postimg.org/j92eliel7/Simulator_Screen_Shot_06_Jul_2016_3_54_19_AM.png "CLTimer beta")
+![Alt text](https://i.imgsafe.org/f01857649c.gif "CLTimer beta")
 
 
 ## Example
