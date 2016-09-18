@@ -27,7 +27,7 @@ public class CLTimer: UIView {
         case Forward
     }
     
-    public  var cltimer_delegate :   cltimerDelegate?
+    public weak var cltimer_delegate :   cltimerDelegate?
    public  var showDefaultCountDown    =   true {
         didSet{
             setNeedsDisplay()
