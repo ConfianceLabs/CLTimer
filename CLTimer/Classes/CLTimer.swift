@@ -45,19 +45,37 @@ public class CLTimer: UIView {
     var countdownSmoother   =   0.01
     var coveredTime:Double   =   0
     var isRunning   =   false
-    @IBInspectable
-    var timerBackgroundColor  :    UIColor =   UIColor.lightGrayColor(){
-        didSet{
-            setNeedsDisplay()
-        }
-    }
-    @IBInspectable
-    var countDownColor   :    UIColor =   UIColor.greenColor(){
+    @IBInspectable public var timerBackgroundColor  :    UIColor =   UIColor.lightGrayColor(){
         didSet{
             setNeedsDisplay()
         }
     }
     
+    @IBInspectable public var timerFillColor   :    UIColor =   UIColor.greenColor(){
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable public var countDownColor   :    UIColor =   UIColor.greenColor(){
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable public var outterRingWidth   :    CGFloat =   2.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable public var innerRingWidth   :    CGFloat =   2.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    public var dynamicFontSizeEnabled : Bool = true
     
     var timerRadius :   CGFloat {
         return min(bounds.size.width,bounds.size.height)/2 * 0.80
@@ -85,31 +103,45 @@ public class CLTimer: UIView {
         
         let countDown   =   pathForCountdown(timerCenter, radius: timerRadius)
         UIColor.clearColor().setFill()
-        countDownColor.setStroke()
+        timerFillColor.setStroke()
         countDown.fill()
         countDown.stroke()
         
-        
-        
-        
         if showDefaultCountDown{
             
-        
-       
-        if countDownFormat==0{
-             text = NSMutableAttributedString(string: "\(remainingTime)"+"s")
-             countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2
-        }else if countDownFormat==1{
-             let currentTime = secondsToMinutes(remainingTime)
-            text = NSMutableAttributedString(string: "\(currentTime.min)"+":"+"\(currentTime.sec)")
-            countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2.5
-        }
-       
-        
-        
-        text.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(countDownFontSize), range: NSMakeRange(0, text.length))
-        text.addAttribute(NSForegroundColorAttributeName,value: countDownColor, range: NSMakeRange(0, text.length))
-        text.drawAtPoint(CGPoint(x: timerCenter.x-text.size().width/2,y: timerCenter.y-text.size().height/2))
+            if dynamicFontSizeEnabled {
+                
+                if countDownFormat==0{
+                    text = NSMutableAttributedString(string: "\(remainingTime)")
+                    countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2
+                }else if countDownFormat==1{
+                    let currentTime = secondsToMinutes(remainingTime)
+                    text = NSMutableAttributedString(string: "\(currentTime.min)"+":"+"\(currentTime.sec)")
+                    countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2.5
+                }
+            } else {
+                
+                var minCountDownFontSize = countDownFontSize
+                
+                if countDownFormat==0{
+                    text = NSMutableAttributedString(string: "\(remainingTime)")
+                    countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2
+                }else if countDownFormat==1{
+                    let currentTime = secondsToMinutes(remainingTime)
+                    text = NSMutableAttributedString(string: "\(currentTime.min)"+":"+"\(currentTime.sec)")
+                    countDownFontSize   =   (timerRadius/CGFloat(text.length)) * 2.5
+                }
+                
+                var fontSize : CGFloat = countDownFontSize
+                if minCountDownFontSize != 0 {
+                    fontSize = min(countDownFontSize, minCountDownFontSize)
+                    countDownFontSize = fontSize
+                }
+            }
+            
+            text.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(countDownFontSize), range: NSMakeRange(0, text.length))
+            text.addAttribute(NSForegroundColorAttributeName,value: countDownColor, range: NSMakeRange(0, text.length))
+            text.drawAtPoint(CGPoint(x: timerCenter.x-text.size().width/2,y: timerCenter.y-text.size().height/2))
 
         }
     }
@@ -129,7 +161,7 @@ public class CLTimer: UIView {
         
         
         
-        path.lineWidth  =   2.0
+        path.lineWidth  =   outterRingWidth
         return path
         
     }
@@ -152,7 +184,7 @@ public class CLTimer: UIView {
             
             
             let path    =   UIBezierPath(arcCenter:centerPoint ,radius: radius,startAngle: startAngle,endAngle: startAngle+endAngle,clockwise: true)
-            path.lineWidth  =   6.0
+            path.lineWidth  =   innerRingWidth
             return path
             
         }else{
@@ -160,7 +192,7 @@ public class CLTimer: UIView {
             endAngle  =   CGFloat((3*M_PI)/Double(2.0))
             
             let path    =   UIBezierPath(arcCenter:centerPoint ,radius: radius,startAngle: startAngle+endAngle,endAngle: endAngle,clockwise: false)
-            path.lineWidth  =   6.0
+            path.lineWidth  =   innerRingWidth
             return path
         }
         
